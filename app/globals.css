@@ -1,26 +1,27 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.todoList {
+  height: 300px;
+  width: 250px;
+  border: 2px solid black;
+  padding: 24px;
+  overflow-y: scroll;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.listItem {
+  padding: 18px;
+  margin-top: 10px;
+  list-style-type: none;
+  border-radius: 12px;
+  border: 1px solid black;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.listItem:hover {
+  cursor: pointer;
+  background-color: lightblue;
 }
